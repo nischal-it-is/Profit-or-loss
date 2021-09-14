@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stock Profile & Loss Calculator</title>
     <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://www.google.com/s2/u/0/favicons?domain=neog.camp"
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="icon.png"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -25,6 +25,8 @@
           id="initial-price"
           placeholder="Enter Initial Price Here"
           min="0"
+          oninput="this.value = 
+          !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null" 
       /></label>
       <label class="input-label" for="stocks-quantity" >
         Quantity of Stocks
@@ -34,6 +36,8 @@
           id="stocks-quantity"
           placeholder="Enter the Number of Stocks bought"
           min="1"
+          oninput="this.value = 
+          !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null" 
         />
       </label>
       <label class="input-label" for="current-price"
@@ -44,6 +48,8 @@
           id="current-price"
           placeholder="Enter the Current Price of the stocks"
           min="0"
+          oninput="this.value = 
+          !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null" 
       /></label>
 
       <button id="submit-btn" class="btn-check">Tell Me!!</button>
