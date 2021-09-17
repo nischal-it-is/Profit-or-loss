@@ -11,13 +11,13 @@ function calculate(costPrice,sellingPrice)
     if(costPrice>sellingPrice)
     {
         var loss=costPrice-sellingPrice;
-        var lossPer=(loss/costPrice)*100;
+        var lossPer=((loss/costPrice)*100).toFixed(2);
         showMessage(`You have suffered a loss of ${loss} and loss % is ${lossPer}`,1);
     }
     else if(sellingPrice>costPrice)
     {
         var profit=sellingPrice-costPrice;
-        var profitPer=(profit/costPrice)*100;
+        var profitPer=((profit/costPrice)*100).toFixed(2);
         showMessage(`You have gained a profit of ${profit} and profit % is ${profitPer}`,0);
     }
     else{
