@@ -31,6 +31,11 @@ button.addEventListener('click', function call(){
     var initial=Number(cp.value);
     var num=Number(quantity.value);
     var current=Number(sp.value);
+    if(initial==0||current==0)
+    {
+        showMessage('Invalid Input');
+        return;
+    }
     calculate(initial*num,current*num);
 })
 function showMessage(message,flag) {
